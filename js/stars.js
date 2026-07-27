@@ -11,7 +11,10 @@ window.addEventListener("resize", resizeCanvas);
 
 const stars = [];
 
-for (let i = 0; i < 300; i++) {
+const starCount =
+window.innerWidth < 768 ? 120 : 300;
+
+for(let i=0;i<starCount;i++) {
     stars.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
