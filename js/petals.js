@@ -36,7 +36,10 @@ function createPetal() {
 
 }
 
-setInterval(createPetal, 200);
+setInterval(
+    createPetal,
+    window.innerWidth < 768 ? 500 : 200
+);
 
 function drawPetals() {
 
